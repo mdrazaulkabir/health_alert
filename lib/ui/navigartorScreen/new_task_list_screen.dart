@@ -25,20 +25,21 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
   List<TaskModel>_newTaskList=[];
   List<TaskStatusCountModel>_newTaskStatusCountList=[];
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      _getNewTaskList();
-      _getTaskStatusCountList();
-    });
-  }
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+  //     _getNewTaskList();
+  //     _getTaskStatusCountList();
+  //   });
+  // }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       body: Column(
         children: [
           SizedBox(

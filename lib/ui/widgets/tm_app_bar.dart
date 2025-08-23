@@ -37,8 +37,11 @@ class _TMAppBarState extends State<TMAppBar> {
             const SizedBox(width: 16,),
             Expanded(
               child: Column(children: [
-                Text(user?.fullName?? 'Guest',style: Theme.of(context).textTheme.titleMedium,),
-                Text(user?.email?? "",style: Theme.of(context).textTheme.titleSmall),
+                Text("Name",style: Theme.of(context).textTheme.titleSmall,),
+                Text("kabir@gmail.com",style: Theme.of(context).textTheme.titleMedium,)
+                
+                // Text(user?.fullName?? 'Guest',style: Theme.of(context).textTheme.titleMedium,),
+                // Text(user?.email?? "",style: Theme.of(context).textTheme.titleSmall),
               ],),
             ),
             const Spacer(),
