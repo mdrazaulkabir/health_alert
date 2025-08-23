@@ -37,11 +37,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 120,
+                  height: 10,
                 ),
                 Text(
-                  "Join With Us",
+                  "Create account",
                   style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(
+                  height: 100,
                 ),
                 TextFormField(
                   decoration: const InputDecoration(
@@ -58,6 +61,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 10,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "First Name",
@@ -72,6 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
 
                 ),
+                const SizedBox(height: 10,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Last Name",
@@ -85,6 +90,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 10,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Mobile ",
@@ -99,6 +105,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 10,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Password",
@@ -113,6 +120,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     return null;
                   },
                 ),
+
                 const SizedBox(
                   height: 20,
                 ),
