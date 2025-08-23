@@ -38,11 +38,14 @@ class _SignInScreenState extends State<SignInScreen> {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 160,
+                    height: 15,
                   ),
                   Text(
-                    "Get Started With",
+                    "Get Started With Login",
                     style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(
+                    height: 170,
                   ),
                   TextFormField(
                     controller: _emailTEController,
@@ -57,7 +60,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       return null;
                     },
                   ),
-                  SizedBox(height: 10,),
+                  const SizedBox(height: 10,),
                   TextFormField(
                     controller: _passwordTEController,
                     decoration: const InputDecoration(hintText: "Password"),
@@ -74,7 +77,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   Visibility(
                     visible: _signinProgress==false,
-                    replacement: CenterCircularProgressIndicator(),
+                    replacement: const CenterCircularProgressIndicator(),
                     child: ElevatedButton(
                         onPressed: _onTapSignInButton,
                         child: const Icon(
@@ -82,25 +85,25 @@ class _SignInScreenState extends State<SignInScreen> {
                         )),
                   ),
                   const SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
                   TextButton(
                     onPressed: _onTapForgottButoon,
                     child: const Text(
                       "Forget Password?",
-                      style: TextStyle(color: CupertinoColors.inactiveGray),    // vvi  If you want to override here
+                      style: TextStyle(color: CupertinoColors.white),    // vvi  If you want to override here
                     ),
                   ),
                   RichText(
                       text: TextSpan(
                           text: "Don't have account ? ",
                           style: const TextStyle(
-                              color: CupertinoColors.inactiveGray,
+                              color: CupertinoColors.white,
                               fontWeight: FontWeight.bold),
                           children: [
                         TextSpan(
                             text: "Signup",
-                            style: const TextStyle(color: Colors.greenAccent),
+                            style: const TextStyle(color: Colors.green),
                           recognizer: TapGestureRecognizer()..onTap=_onTapSignUpButton,
 
                         ),
@@ -115,10 +118,10 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
   void _onTapSignInButton(){
-    if(_formkey.currentState!.validate()){
-      _signIn();
-     //Navigator.pushAndRemoveUntil(context, newRoute, (route) => false)
-    }
+    // if(_formkey.currentState!.validate()){
+    //   _signIn();
+    // }
+    Navigator.pushNamedAndRemoveUntil(context, BottomMainNavScreen.name, (route) => false);
   }
 
 

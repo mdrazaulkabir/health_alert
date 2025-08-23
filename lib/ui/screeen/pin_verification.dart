@@ -34,10 +34,10 @@ class _PinVerificationState extends State<PinVerification> {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           child: Column(
             children: [
-              const SizedBox(height: 120,),
-              Text("PIN Verification",style: Theme.of(context).textTheme.titleLarge,),
-              const Text("A 6 digit verification pin will send to your email address",style: TextStyle(color: CupertinoColors.inactiveGray),),
               const SizedBox(height: 10,),
+              Text("PIN Verification",style: Theme.of(context).textTheme.titleLarge,),
+              const Text("A 6 digit verification pin will send to your email address",style: TextStyle(color: CupertinoColors.white),),
+              const SizedBox(height: 160,),
               PinCodeTextField(
                 keyboardType: TextInputType.number,
                 controller: _pinOtpTEController,
@@ -52,9 +52,10 @@ class _PinVerificationState extends State<PinVerification> {
                   activeFillColor: Colors.white,
                 ),
                 animationDuration: const Duration(milliseconds: 300),
-                backgroundColor: Colors.white,
+                backgroundColor: Colors.transparent,
                 //enableActiveFill: true,
                 appContext: context,  //must be give
+                enableActiveFill: true,
               ),
               const SizedBox(height: 20,),
               Visibility(
@@ -72,9 +73,10 @@ class _PinVerificationState extends State<PinVerification> {
     );
   }
   void _onTapPinVerificationButoon(){
-    if(_formKey.currentState!.validate()){
-      pinVerificationApiCall();
-    }
+    // if(_formKey.currentState!.validate()){
+    //   pinVerificationApiCall();
+    // }
+    Navigator.pushNamed(context, PassWordScreen.name);
   }
   
   

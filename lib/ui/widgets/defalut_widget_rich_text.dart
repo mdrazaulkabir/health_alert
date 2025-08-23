@@ -16,7 +16,7 @@ class _DefalutWidgetRichTextState extends State<DefalutWidgetRichText> {
     return RichText(
         text: TextSpan(
             text: "Have account? ",
-            style: const TextStyle(color: CupertinoColors.inactiveGray),
+            style: const TextStyle(color: CupertinoColors.white),
             children:  [
           TextSpan(text: "Sign in", style: TextStyle(color: Colors.green),
             recognizer: TapGestureRecognizer()..onTap= _moveToSignInButton,

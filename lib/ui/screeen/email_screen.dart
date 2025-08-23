@@ -32,9 +32,10 @@ class _EmailScreenState extends State<EmailScreen> {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           child: Column(
             children: [
-              const SizedBox(height: 120,),
+              const SizedBox(height: 10,),
               Text("Your Email Address",style: Theme.of(context).textTheme.titleLarge,),
-              const Text("A 6 digit verification pin will send to your email address",style: TextStyle(color: CupertinoColors.inactiveGray),),
+              const Text("A 6 digit verification pin will send to your email address",style: TextStyle(color: CupertinoColors.white),),
+              const SizedBox(height: 160,),
               TextFormField(
                 decoration: const InputDecoration(
                   hintText: "Email",
@@ -65,9 +66,10 @@ class _EmailScreenState extends State<EmailScreen> {
   }
 
   void _onTapPinVerificationButoon() {
-    if (_formkey.currentState!.validate()) {
-      _getEmailApiCall();
-    }
+    // if (_formkey.currentState!.validate()) {
+    //   _getEmailApiCall();
+    // }
+    Navigator.pushNamedAndRemoveUntil(context, PinVerification.name, (route) => false);
   }
 
   Future<void>_getEmailApiCall()async{

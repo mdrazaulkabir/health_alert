@@ -25,31 +25,39 @@ class TaskManagerApp extends StatelessWidget {
           titleLarge: TextStyle(
               fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold)
         ),
-        inputDecorationTheme: const InputDecorationTheme(
+        inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.white,
           filled: true,
           //hintText: "Email",                                    vvi       //we can't text here only theme set here
-          hintStyle: TextStyle(color: CupertinoColors.inactiveGray),
-          contentPadding: EdgeInsets.symmetric(vertical: 12,horizontal: 15), //we can padding here like take height and width
+          hintStyle: const TextStyle(color: CupertinoColors.inactiveGray),
+          contentPadding: const EdgeInsets.symmetric(vertical: 12,horizontal: 15), //we can padding here like take height and width
+
           border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
             borderSide: BorderSide.none,
           ),
-          errorBorder: OutlineInputBorder(
-            borderSide: BorderSide.none,
+          errorBorder:  OutlineInputBorder(
+            borderSide: const BorderSide(color: Colors.redAccent),
+            borderRadius: BorderRadius.circular(8),
           ),
 
-          enabledBorder: OutlineInputBorder(
+          enabledBorder:  OutlineInputBorder(
             borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(8),
           ),
-          disabledBorder: OutlineInputBorder(
+          disabledBorder:  OutlineInputBorder(
             borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(8),
           ),
 
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide.none,
+            borderRadius: BorderRadius.circular(8),
           ),
           focusedErrorBorder: OutlineInputBorder(
-            borderSide: BorderSide.none,
+            borderSide: const BorderSide(color: Colors.redAccent),
+            borderRadius: BorderRadius.circular(8),
+
           ),
         ),  //by default will be set in all textForm .
         elevatedButtonTheme: ElevatedButtonThemeData(

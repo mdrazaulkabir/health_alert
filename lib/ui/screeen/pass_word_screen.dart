@@ -34,10 +34,12 @@ class _PassWordScreenState extends State<PassWordScreen> {
             key: _formkey,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             child: Column(
+             // mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const SizedBox(height: 120,),
+                const SizedBox(height: 10,),
                 Text("Set Password",style: Theme.of(context).textTheme.titleLarge,),
-                const Text("Minimum length password 8 character with latter and number commbination",style: TextStyle(color: CupertinoColors.inactiveGray),),
+               // Text("Minimum length password 8 character with latter",style: TextStyle(color: CupertinoColors.white),),
+                const SizedBox(height: 180,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Password",
@@ -51,6 +53,7 @@ class _PassWordScreenState extends State<PassWordScreen> {
                     return null;
                   },
                 ),
+                const SizedBox(height: 20,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Confirm Password",
@@ -83,9 +86,10 @@ class _PassWordScreenState extends State<PassWordScreen> {
   }
 
   void _onTapPasswordButtoon() {
-    if (_formkey.currentState!.validate()) {
-      _getTapPasswordApi();
-    }
+    // if (_formkey.currentState!.validate()) {
+    //   _getTapPasswordApi();
+    // }
+    Navigator.pushNamedAndRemoveUntil(context, SignInScreen.name, (route) => false);
   }
 
   Future<void>_getTapPasswordApi()async{
