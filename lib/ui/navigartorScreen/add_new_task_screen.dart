@@ -37,14 +37,14 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 120,
+                  height: 10,
                 ),
                 Text(
-                  "Add New Task",
+                  "Add Your Description",
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(
-                  height: 6,
+                  height: 120,
                 ),
                 //const Text("Minimum length password 8 character with latter and number commbination",style: TextStyle(color: CupertinoColors.inactiveGray),),
                 TextFormField(
@@ -60,6 +60,7 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                     return null;
                   },
                 ),
+                SizedBox(height: 15,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Description",

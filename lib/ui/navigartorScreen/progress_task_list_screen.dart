@@ -18,13 +18,13 @@ class _ProgressTaskListScreenState extends State<ProgressTaskListScreen> {
   bool _getProgressTaskInProgress=false;
   List<TaskModel>_progressTaskList=[];
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      _getProgressTaskList();
-    });
-  }
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+  //     _getProgressTaskList();
+  //   });
+  // }
 
 
   @override

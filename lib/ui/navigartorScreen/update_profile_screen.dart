@@ -58,14 +58,14 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
             child: Column(
               children: [
                 const SizedBox(
-                  height: 60,
+                  height: 10,
                 ),
                 Text(
                   "Update Profile",
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 70,
                 ),
                 GestureDetector(
                   onTap: _onTapImagePicker,
@@ -121,6 +121,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                   //   return null;
                   // },
                 ),
+                SizedBox(height: 15,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "First Name",
@@ -134,6 +135,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                     return null;
                   },
                 ),
+                SizedBox(height: 15,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Last Name",
@@ -147,6 +149,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                     return null;
                   },
                 ),
+                SizedBox(height: 15,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Mobile ",
@@ -161,6 +164,7 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
                     return null;
                   },
                 ),
+                SizedBox(height: 15,),
                 TextFormField(
                   decoration: const InputDecoration(
                     hintText: "Password",

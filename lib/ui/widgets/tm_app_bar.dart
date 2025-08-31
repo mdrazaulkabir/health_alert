@@ -24,6 +24,7 @@ class _TMAppBarState extends State<TMAppBar> {
     final user=AuthController.userModel;
     return AppBar(
       backgroundColor: Colors.greenAccent,
+      automaticallyImplyLeading: true,
       title: GestureDetector(
         onTap: _onTabAppBarGestureDetector,
         child: Row(
@@ -34,6 +35,7 @@ class _TMAppBarState extends State<TMAppBar> {
               MemoryImage(base64Decode(user!.photo!)),
               child: (user?.photo==null || user!.photo!.isNotEmpty)? const Icon(Icons.person,color: Colors.green,):null
             ),
+            // Drawer(backgroundColor: Colors.green,),
             const SizedBox(width: 16,),
             Expanded(
               child: Column(children: [
@@ -44,8 +46,8 @@ class _TMAppBarState extends State<TMAppBar> {
                 // Text(user?.email?? "",style: Theme.of(context).textTheme.titleSmall),
               ],),
             ),
-            const Spacer(),
-            IconButton(onPressed: _onTapLogoutButton, icon: const Icon(Icons.logout))
+            //const Spacer(),
+           // IconButton(onPressed: _onTapLogoutButton, icon: const Icon(Icons.logout))
           ],
         ),
       ),

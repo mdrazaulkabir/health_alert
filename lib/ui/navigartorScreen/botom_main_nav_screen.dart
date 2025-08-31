@@ -6,6 +6,7 @@ import 'package:task_mannager/ui/navigartorScreen/progress_task_list_screen.dart
 import 'package:task_mannager/ui/navigartorScreen/service_screen.dart';
 import 'package:task_mannager/ui/widgets/tm_app_bar.dart';
 
+import '../widgets/app_drawer.dart';
 import 'new_task_list_screen.dart';
 class BottomMainNavScreen extends StatefulWidget {
   const BottomMainNavScreen({super.key});
@@ -25,6 +26,7 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const TMAppBar(),
+      drawer: const AppDrawer(),
       body: _screen[_selectIndex],
       bottomNavigationBar: NavigationBar(
         backgroundColor: Colors.white,

@@ -24,7 +24,7 @@ class _splashScreenState extends State<splashScreen> {
   }
 
   Future<void> moveToNextScreen() async {
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 5));
     // Navigator.pushReplacementNamed(context, '/Sign-in');   //it's can possible to mistake.That's way we create static variable
     bool isLogin=await AuthController.isUserLogin();
     if(isLogin){
