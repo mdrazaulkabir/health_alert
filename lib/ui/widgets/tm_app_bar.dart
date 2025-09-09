@@ -29,17 +29,10 @@ class _TMAppBarState extends State<TMAppBar> {
         onTap: _onTabAppBarGestureDetector,
         child: Row(
           children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: user?.photo == null ? null :
-              MemoryImage(base64Decode(user!.photo!)),
-              child: (user?.photo==null || user!.photo!.isNotEmpty)? const Icon(Icons.person,color: Colors.green,):null
-            ),
-            // Drawer(backgroundColor: Colors.green,),
             const SizedBox(width: 16,),
             Expanded(
               child: Column(children: [
-                Text("Name",style: Theme.of(context).textTheme.titleSmall,),
+                Text("Name:",style: Theme.of(context).textTheme.titleSmall,),
                 Text("kabir@gmail.com",style: Theme.of(context).textTheme.titleMedium,)
                 
                 // Text(user?.fullName?? 'Guest',style: Theme.of(context).textTheme.titleMedium,),
@@ -47,7 +40,13 @@ class _TMAppBarState extends State<TMAppBar> {
               ],),
             ),
             //const Spacer(),
-           // IconButton(onPressed: _onTapLogoutButton, icon: const Icon(Icons.logout))
+           // IconButton(onPressed: _onTapLogoutButton, icon: const Icon(Icons.logout)),
+            CircleAvatar(
+                radius: 20,
+                backgroundImage: user?.photo == null ? null :
+                MemoryImage(base64Decode(user!.photo!)),
+                child: (user?.photo==null || user!.photo!.isNotEmpty)? const Icon(Icons.person,color: Colors.green,):null
+            ),
           ],
         ),
       ),

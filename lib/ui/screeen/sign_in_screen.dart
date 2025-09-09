@@ -10,7 +10,6 @@ import 'package:task_mannager/ui/screeen/email_screen.dart';
 import 'package:task_mannager/ui/screeen/sign_up_screen.dart';
 import 'package:task_mannager/ui/widgets/screen_background.dart';
 import 'package:task_mannager/ui/widgets/show_snack_bar_massanger.dart';
-
 import '../widgets/center_circular_Progress_indicator.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -118,10 +117,10 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
   void _onTapSignInButton(){
-    // if(_formkey.currentState!.validate()){
-    //   _signIn();
-    // }
-    Navigator.pushNamedAndRemoveUntil(context, BottomMainNavScreen.name, (route) => false);
+    if(_formkey.currentState!.validate()){
+      _signIn();
+    }
+    // Navigator.pushNamedAndRemoveUntil(context, BottomMainNavScreen.name, (route) => false);
   }
 
 

@@ -86,10 +86,10 @@ class _PassWordScreenState extends State<PassWordScreen> {
   }
 
   void _onTapPasswordButtoon() {
-    // if (_formkey.currentState!.validate()) {
-    //   _getTapPasswordApi();
-    // }
-    Navigator.pushNamedAndRemoveUntil(context, SignInScreen.name, (route) => false);
+    if (_formkey.currentState!.validate()) {
+      _getTapPasswordApi();
+    }
+    // Navigator.pushNamedAndRemoveUntil(context, SignInScreen.name, (route) => false);
   }
 
   Future<void>_getTapPasswordApi()async{

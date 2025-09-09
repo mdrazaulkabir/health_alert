@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:task_mannager/ui/health/section_header.dart';
 import 'package:task_mannager/ui/health/service_item.dart';
@@ -51,6 +52,8 @@ class HomeDashboardScreen extends StatelessWidget {
                 ),
               ),
 
+
+
               /// Top Hospital Section
               SectionHeader(title: "Top Hospital"),
               SizedBox(
@@ -70,6 +73,19 @@ class HomeDashboardScreen extends StatelessWidget {
                       // imageUrl: "https://via.placeholder.com/150",
                       imageAsset: assetPath.pediatricHospital,
                       title: "Pediatrics",
+                      subtitle: "647 Doctor",
+                    ),
+                    HospitalCard(
+                      // imageUrl: "https://via.placeholder.com/150",
+                      imageAsset: assetPath.pediatricHospital,
+                      title: "Pediatrics",
+                      subtitle: "647 Doctor",
+                    ),
+                    HospitalCard(
+                      // imageUrl: "https://via.placeholder.com/150",
+                      imageAsset: assetPath.generalHospital,
+
+                      title: "General Doctor",
                       subtitle: "647 Doctor",
                     ),
                   ],

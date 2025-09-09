@@ -66,10 +66,10 @@ class _EmailScreenState extends State<EmailScreen> {
   }
 
   void _onTapPinVerificationButoon() {
-    // if (_formkey.currentState!.validate()) {
-    //   _getEmailApiCall();
-    // }
-    Navigator.pushNamedAndRemoveUntil(context, PinVerification.name, (route) => false);
+    if (_formkey.currentState!.validate()) {
+      _getEmailApiCall();
+    }
+   // Navigator.pushNamedAndRemoveUntil(context, PinVerification.name, (route) => false);
   }
 
   Future<void>_getEmailApiCall()async{

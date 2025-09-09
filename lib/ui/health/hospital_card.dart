@@ -26,11 +26,12 @@ class HospitalCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             child: Image.asset(
-              imageAsset,   // <-- load from assets
+              imageAsset, // <-- load from assets
               height: 100,
               width: double.infinity,
               fit: BoxFit.cover,
-            ),          ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(

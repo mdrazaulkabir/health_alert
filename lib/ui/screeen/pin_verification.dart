@@ -73,10 +73,10 @@ class _PinVerificationState extends State<PinVerification> {
     );
   }
   void _onTapPinVerificationButoon(){
-    // if(_formKey.currentState!.validate()){
-    //   pinVerificationApiCall();
-    // }
-    Navigator.pushNamed(context, PassWordScreen.name);
+    if(_formKey.currentState!.validate()){
+      pinVerificationApiCall();
+    }
+    // Navigator.pushNamed(context, PassWordScreen.name);
   }
   
   

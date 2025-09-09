@@ -29,9 +29,37 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: const Icon(Icons.person),
-            title: const Text("Profile"),
+            leading: const Icon(Icons.home),
+            title: const Text("Home"),
             onTap: () {
+              Navigator.pushNamed(context, UpdateProfileScreen.name);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text("My Profile"),
+            onTap: () {
+              Navigator.pushNamed(context, UpdateProfileScreen.name);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.settings_applications_rounded),
+            title: const Text("Appointment"),
+            onTap: () {
+              Navigator.pushNamed(context, UpdateProfileScreen.name);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.layers_outlined),
+            title: const Text("My Health Record"),
+            onTap: () {
+              Navigator.pushNamed(context, UpdateProfileScreen.name);
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.document_scanner_outlined),
+            title: const Text("My Health Card"),
+            onTap: (){
               Navigator.pushNamed(context, UpdateProfileScreen.name);
             },
           ),
