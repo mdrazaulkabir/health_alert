@@ -51,8 +51,24 @@ class HomeDashboardScreen extends StatelessWidget {
                   ],
                 ),
               ),
-
-
+              SectionHeader(title: "Doctor"),
+              CarouselSlider(
+                options: CarouselOptions(height: 140.0),
+                items: [1,2,3,4,5].map((i) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                          width: MediaQuery.of(context).size.width,
+                          margin: EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: BoxDecoration(
+                              color: Colors.amber
+                          ),
+                          child: Text('text $i', style: TextStyle(fontSize: 16.0),)
+                      );
+                    },
+                  );
+                }).toList(),
+              ),
 
               /// Top Hospital Section
               SectionHeader(title: "Top Hospital"),
