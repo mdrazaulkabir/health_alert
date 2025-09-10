@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:task_mannager/ui/widgets/center_circular_Progress_indicator.dart';
 
-import '../../data/model/task_model.dart';
-import '../../data/service/network_caller.dart';
-import '../../data/urls.dart';
-import '../widgets/show_snack_bar_massanger.dart';
-import '../widgets/task_card.dart';
+import '../../../data/model/task_model.dart';
+import '../../../data/service/network_caller.dart';
+import '../../../data/urls.dart';
+import '../../widgets/show_snack_bar_massanger.dart';
+import '../../widgets/task_card.dart';
+import '../../widgets/tm_app_bar.dart';
 class ProgressTaskListScreen extends StatefulWidget {
   const ProgressTaskListScreen({super.key});
   static const String name='progressTaskListScreen';
@@ -30,7 +31,7 @@ class _ProgressTaskListScreenState extends State<ProgressTaskListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: TMAppBar(),
+      appBar: TMAppBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 16),
         child: Visibility(

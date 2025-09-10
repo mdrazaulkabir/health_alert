@@ -11,7 +11,7 @@ import 'package:task_mannager/ui/widgets/center_circular_Progress_indicator.dart
 import 'package:task_mannager/ui/widgets/show_snack_bar_massanger.dart';
 import 'package:task_mannager/ui/widgets/tm_app_bar.dart';
 
-import '../widgets/screen_background.dart';
+import '../../widgets/screen_background.dart';
 
 class UpdateProfileScreen extends StatefulWidget {
   const UpdateProfileScreen({super.key});

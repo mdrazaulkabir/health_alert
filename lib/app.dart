@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:task_mannager/ui/navigartorScreen/add_new_task_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/add_new_task_screen.dart';
 import 'package:task_mannager/ui/navigartorScreen/botom_main_nav_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/cancled_task_list_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/complete_task_list_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/cancled_task_list_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/complete_task_list_screen.dart';
 import 'package:task_mannager/ui/screeen/email_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/new_task_list_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/new_task_list_screen.dart';
 import 'package:task_mannager/ui/screeen/pass_word_screen.dart';
 import 'package:task_mannager/ui/screeen/pin_verification.dart';
-import 'package:task_mannager/ui/navigartorScreen/progress_task_list_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/progress_task_list_screen.dart';
 import 'package:task_mannager/ui/screeen/sign_in_screen.dart';
 import 'package:task_mannager/ui/screeen/sign_up_screen.dart';
 import 'package:task_mannager/ui/screeen/splash_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/update_profile_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/update_profile_screen.dart';
 class HealthAleartApp extends StatelessWidget {
   const HealthAleartApp({super.key});
   static GlobalKey<NavigatorState>navigator=GlobalKey<NavigatorState>();

@@ -32,7 +32,7 @@ class _TaskCardState extends State<TaskCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
+      elevation: 10,
       color: Colors.grey[300],
       child: Padding(
         padding: const EdgeInsets.all(10),
@@ -40,7 +40,7 @@ class _TaskCardState extends State<TaskCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Title: ${widget.taskModel.title}",
+              "Patient: ${widget.taskModel.title}",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             Text(
@@ -77,7 +77,7 @@ class _TaskCardState extends State<TaskCard> {
                       onPressed: () {
                         _showEditTaskStatusDialog();
                       },
-                      icon: const Icon(Icons.edit)),
+                      icon: const Icon(Icons.edit,)),
                 ),
                 const SizedBox(
                   width: 3,
@@ -89,7 +89,7 @@ class _TaskCardState extends State<TaskCard> {
                       onPressed: () {
                         _showDeleteConfirmAlertDialog();
                       },
-                      icon: const Icon(Icons.delete)),
+                      icon: const Icon(Icons.delete,)),
                 ),
               ],
             )

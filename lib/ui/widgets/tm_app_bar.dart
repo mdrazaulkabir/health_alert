@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:task_mannager/ui/controller/auth_controller.dart';
 import 'package:task_mannager/ui/screeen/sign_in_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/update_profile_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/patientNewTaskScreen/update_profile_screen.dart';
 
 class TMAppBar extends StatefulWidget implements PreferredSizeWidget {
   const TMAppBar({

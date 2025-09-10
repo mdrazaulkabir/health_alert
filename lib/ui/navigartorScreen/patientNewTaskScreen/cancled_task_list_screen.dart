@@ -4,8 +4,9 @@ import 'package:task_mannager/ui/widgets/center_circular_Progress_indicator.dart
 import 'package:task_mannager/ui/widgets/show_snack_bar_massanger.dart';
 import 'package:task_mannager/ui/widgets/task_card.dart';
 
-import '../../data/model/task_model.dart';
-import '../../data/urls.dart';
+import '../../../data/model/task_model.dart';
+import '../../../data/urls.dart';
+import '../../widgets/tm_app_bar.dart';
 class CanceledTaskListScreen extends StatefulWidget {
   const CanceledTaskListScreen({super.key});
   static const String name='canceledTaskListScreen';
@@ -27,7 +28,7 @@ class _CanceledTaskListScreenState extends State<CanceledTaskListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // appBar: TMAppBar(),
+      appBar: TMAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: Visibility(

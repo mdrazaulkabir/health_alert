@@ -6,7 +6,7 @@ import 'package:task_mannager/ui/widgets/center_circular_Progress_indicator.dart
 import 'package:task_mannager/ui/widgets/show_snack_bar_massanger.dart';
 import 'package:task_mannager/ui/widgets/tm_app_bar.dart';
 
-import '../widgets/screen_background.dart';
+import '../../widgets/screen_background.dart';
 
 class AddNewTaskScreen extends StatefulWidget {
   const AddNewTaskScreen({super.key});
@@ -49,13 +49,13 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                 //const Text("Minimum length password 8 character with latter and number commbination",style: TextStyle(color: CupertinoColors.inactiveGray),),
                 TextFormField(
                   decoration: const InputDecoration(
-                    hintText: "Subject",
+                    hintText: "Name:",
                   ),
                   textInputAction: TextInputAction.next,
                   controller: _subjectTEController,
                   validator: (String? value) {
                     if (value!.isEmpty) {
-                      return "Enter valid one subject!";
+                      return "Enter Patient Name!";
                     }
                     return null;
                   },
@@ -63,7 +63,7 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                 SizedBox(height: 15,),
                 TextFormField(
                   decoration: const InputDecoration(
-                    hintText: "Description",
+                    hintText: "Patient Description",
                   ),
                   maxLines: 5,
                   textInputAction: TextInputAction.next,
@@ -87,7 +87,6 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                //const DefalutWidgetRichText(),
               ],
             ),
           ),
@@ -112,12 +111,12 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
         "status":"New"
       };
     NetworkResponse response=await NetworkCaller.postRequest(url:Urls.createNewTaskUrl ,body: requestBody);
-    _addTaskProgress = false;
-    setState(() {});
     if(response.isSuccess){
       _subjectTEController.clear();
       _descriptionTEController.clear();
       ShowSnackBarMessage(context, "Successfully added new task");
+      _addTaskProgress = false;
+      setState(() {});
     }
     else{
       ShowSnackBarMessage(context, response.errorMessage!);

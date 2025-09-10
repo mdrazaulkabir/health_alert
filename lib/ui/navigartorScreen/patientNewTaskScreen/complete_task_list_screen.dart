@@ -1,11 +1,14 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:task_mannager/data/service/network_caller.dart';
 import 'package:task_mannager/ui/widgets/center_circular_Progress_indicator.dart';
 import 'package:task_mannager/ui/widgets/show_snack_bar_massanger.dart';
 
-import '../../data/model/task_model.dart';
-import '../../data/urls.dart';
-import '../widgets/task_card.dart';
+import '../../../data/model/task_model.dart';
+import '../../../data/urls.dart';
+import '../../widgets/task_card.dart';
+import '../../widgets/tm_app_bar.dart';
 class CompleteTaskListScreen extends StatefulWidget {
   const CompleteTaskListScreen({super.key});
   static const String name='completeTaskListScreen';
@@ -28,7 +31,7 @@ class _CompleteTaskListScreenState extends State<CompleteTaskListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // appBar: TMAppBar(),
+      appBar: TMAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: Visibility(

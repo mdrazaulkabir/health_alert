@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:task_mannager/ui/health/home_dashboard_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/cancled_task_list_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/complete_task_list_screen.dart';
+import 'package:task_mannager/ui/navigartorScreen/doctor_screen.dart';
 import 'package:task_mannager/ui/navigartorScreen/live_chat_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/patient_screen.dart';
-import 'package:task_mannager/ui/navigartorScreen/progress_task_list_screen.dart';
 import 'package:task_mannager/ui/navigartorScreen/service_screen.dart';
 import 'package:task_mannager/ui/widgets/tm_app_bar.dart';
 
 import '../widgets/app_drawer.dart';
-import 'new_task_list_screen.dart';
+import 'patientNewTaskScreen/new_task_list_screen.dart';
 class BottomMainNavScreen extends StatefulWidget {
   const BottomMainNavScreen({super.key});
   static const String name="bottomMainNav";
@@ -22,11 +19,15 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
   final List<Widget> _screen = [
     const HomeDashboardScreen(),
     const NewTaskListScreen(),
-    const ProgressTaskListScreen(),
-    const CompleteTaskListScreen(),
-    const CanceledTaskListScreen(),
+
+    const DoctorScreen(),
     const ServiceScreen(),
-    const LiveChatScreen()
+    const LiveChatScreen(),
+
+    // const ProgressTaskListScreen(),
+    // const CompleteTaskListScreen(),
+    // const CanceledTaskListScreen(),
+
   ];
   int _selectIndex=0;
   @override
@@ -44,23 +45,11 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
           setState(() {});
           },
           destinations: const [
-            // NavigationDestination(icon:Icon(Icons.home_filled,color: Colors.greenAccent,), label:"New"),
-            // NavigationDestination(icon:Icon(Icons.production_quantity_limits), label:"Progress"),
-            // NavigationDestination(icon:Icon(Icons.done), label:"Completed"),
-            // NavigationDestination(icon:Icon(Icons.close), label:"Canceled"),
-
             NavigationDestination(icon: Icon(Icons.home,color: Colors.lightBlueAccent,), label: "Home"),
-            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
-            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
-            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
-            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
-            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
-
-
-            // NavigationDestination(icon:Icon(Icons.person), label:"Doctor"),
-            // NavigationDestination(icon:Icon(Icons.medical_services), label:"Medicine"),
-            //
-            // NavigationDestination(icon:Icon(Icons.live_help), label:"LiveChat"),
+            NavigationDestination(icon:Icon(Icons.sick_outlined,color: Colors.lightBlueAccent,), label:"Patient"),
+            NavigationDestination(icon:Icon(Icons.person,color: Colors.greenAccent,), label:"Doctor"),
+            NavigationDestination(icon:Icon(Icons.medical_services,color: Colors.greenAccent), label:"Medicine"),
+            NavigationDestination(icon:Icon(Icons.live_help,color: Colors.greenAccent), label:"LiveChat"),
 
           ]),
     );
