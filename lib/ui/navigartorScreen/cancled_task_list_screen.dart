@@ -17,13 +17,13 @@ class _CanceledTaskListScreenState extends State<CanceledTaskListScreen> {
   bool _getCancelTaskInProgress=false;
   List<TaskModel>_cancelTaskList=[];
   @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-  //     _getCancelTaskList();
-  //   });
-  // }
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _getCancelTaskList();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

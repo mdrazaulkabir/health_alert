@@ -37,7 +37,7 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
       ),
       body: _screen[_selectIndex],
       bottomNavigationBar: NavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey,
         selectedIndex: _selectIndex,
           onDestinationSelected: (int index){
           _selectIndex=index;
@@ -49,13 +49,18 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
             // NavigationDestination(icon:Icon(Icons.done), label:"Completed"),
             // NavigationDestination(icon:Icon(Icons.close), label:"Canceled"),
 
-            NavigationDestination(icon: Icon(Icons.home,color: Colors.greenAccent,), label: "Home"),
-            NavigationDestination(icon:Icon(Icons.person,color: Colors.greenAccent,), label:"Patient"),
-            NavigationDestination(icon:Icon(Icons.person), label:"Doctor"),
-            NavigationDestination(icon:Icon(Icons.medical_services), label:"Medicine"),
-            // NavigationDestination(icon:Icon(Icons.insert_page_break_outlined), label:"Report"),
-            // NavigationDestination(icon:Icon(Icons.help), label:"Service"),
-            NavigationDestination(icon:Icon(Icons.live_help), label:"LiveChat"),
+            NavigationDestination(icon: Icon(Icons.home,color: Colors.lightBlueAccent,), label: "Home"),
+            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
+            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
+            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
+            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
+            NavigationDestination(icon:Icon(Icons.person,color: Colors.lightBlueAccent,), label:"Patient"),
+
+
+            // NavigationDestination(icon:Icon(Icons.person), label:"Doctor"),
+            // NavigationDestination(icon:Icon(Icons.medical_services), label:"Medicine"),
+            //
+            // NavigationDestination(icon:Icon(Icons.live_help), label:"LiveChat"),
 
           ]),
     );

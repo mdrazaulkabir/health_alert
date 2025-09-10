@@ -4,8 +4,8 @@ class assetPath{
   // static const String backgroundSvg="$_imagePath/background.svg";
   static const String backgroundSvg="${_imagePath}logoh.svg";
   static const String logoHealth="${_imagePath}logoh.svg";
-  static const generalHospital="${_imagePath}gen.jpeg";
-  static const pediatricHospital="${_imagePath}pe.jpg";
+  static const String generalHospital="${_imagePath}gen.jpeg";
+  static const String pediatricHospital="${_imagePath}pe.jpg";
 }
 
 

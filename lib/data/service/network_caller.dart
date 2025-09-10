@@ -126,7 +126,7 @@ class NetworkCaller {
 
  static Future<void>_onUnauthorize()async{
     await AuthController.clearData();
-    Navigator.of(TaskManagerApp.navigator.currentContext!).pushNamedAndRemoveUntil(SignInScreen.name, (route) => false);
+    Navigator.of(HealthAleartApp.navigator.currentContext!).pushNamedAndRemoveUntil(SignInScreen.name, (route) => false);
   }
 
 }

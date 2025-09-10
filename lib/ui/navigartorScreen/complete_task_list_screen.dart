@@ -17,14 +17,14 @@ class _CompleteTaskListScreenState extends State<CompleteTaskListScreen> {
   bool _getCompleteTaskInProgress=false;
   List<TaskModel>_completeTaskList=[];
   @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   //_getCompleteTaskList();
-  //   WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-  //     _getCompleteTaskList();
-  //   });
-  // }
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //_getCompleteTaskList();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _getCompleteTaskList();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

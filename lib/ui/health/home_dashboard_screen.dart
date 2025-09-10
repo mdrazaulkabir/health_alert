@@ -13,7 +13,7 @@ class HomeDashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black12,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -38,7 +38,7 @@ class HomeDashboardScreen extends StatelessWidget {
               ),
 
               /// Departments Section
-              SectionHeader(title: "Departments"),
+              SectionHeader(title: "Departments",viewAll: (){}),
               SizedBox(
                 height: 130,
                 child: ListView(
@@ -51,11 +51,11 @@ class HomeDashboardScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SectionHeader(title: "Doctor"),
+              SectionHeader(title: "Doctor",viewAll: (){}),
               DoctorBannerSlider(),
 
               /// Top Hospital Section
-              SectionHeader(title: "Top Hospital"),
+              SectionHeader(title: "Top Hospital",viewAll: (){}),
               SizedBox(
                 height: 160,
                 child: ListView(
@@ -96,19 +96,6 @@ class HomeDashboardScreen extends StatelessWidget {
         ),
       ),
 
-      /// Bottom NavBar (Optional)
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: 0,
-      //   type: BottomNavigationBarType.fixed,
-      //   selectedItemColor: Colors.blue,
-      //   unselectedItemColor: Colors.grey,
-      //   items: const [
-      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-      //     BottomNavigationBarItem(icon: Icon(Icons.person), label: "Doctor"),
-      //     BottomNavigationBarItem(icon: Icon(Icons.medical_services), label: "Medicine"),
-      //     BottomNavigationBarItem(icon: Icon(Icons.settings), label: "More"),
-      //   ],
-      // ),
     );
   }
 }
