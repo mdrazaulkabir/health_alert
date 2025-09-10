@@ -20,7 +20,7 @@ class DefaultTaskCountSummaryCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text("$count",style: Theme.of(context).textTheme.titleLarge,),
-                Text(title,style: TextStyle(color:Colors.grey,fontSize: 14),)
+                Text("${title}",style: TextStyle(color:Colors.grey,fontSize: 14),)
               ],
             ),
           ),

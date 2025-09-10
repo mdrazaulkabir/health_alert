@@ -95,6 +95,7 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
 
             ),
           ),
+          Text("New Patient Admitted",style: Theme.of(context).textTheme.titleLarge,),
           Expanded(
             child: Visibility(
               visible: _getNewTaskInProgress == false,
@@ -128,8 +129,7 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
     if (mounted) {
       setState(() {});
     }
-    NetworkResponse response =
-    await NetworkCaller.getRequest(url: Urls.getNewTaskListUrl);
+    NetworkResponse response = await NetworkCaller.getRequest(url: Urls.getNewTaskListUrl);
 
     if (response.isSuccess) {
       List<TaskModel> list = [];
@@ -158,8 +158,7 @@ class _NewTaskListScreenState extends State<NewTaskListScreen> {
   Future<void> _getTaskStatusCountList() async {
     _getTaskStatusCountInProgress = true;
     setState(() {});
-    NetworkResponse response =
-    await NetworkCaller.getRequest(url: Urls.getTaskStatusCountListUrl);
+    NetworkResponse response = await NetworkCaller.getRequest(url: Urls.getTaskStatusCountListUrl);
     if (response.isSuccess) {
       List<TaskStatusCountModel> list = [];
       for (Map<String, dynamic> jsonData in response.body!['data']) {

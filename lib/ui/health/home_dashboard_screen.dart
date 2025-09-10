@@ -41,14 +41,20 @@ class HomeDashboardScreen extends StatelessWidget {
               SectionHeader(title: "Departments",viewAll: (){}),
               SizedBox(
                 height: 130,
-                child: ListView(
+                child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   padding: const EdgeInsets.symmetric(horizontal: 12),
-                  children: const [
-                    DepartmentCard(title: "General Care", subtitle: "647 Doctor", icon: Icons.person),
-                    DepartmentCard(title: "Pediatrics", subtitle: "324 Doctor", icon: Icons.child_care),
-                    DepartmentCard(title: "Cardiologic", subtitle: "647 Doctor", icon: Icons.favorite),
-                  ],
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const DepartmentCard(title: "General Care",
+                        subtitle: "647 Doctor",
+                        icon: Icons.person);
+                  },
+                  // children: const [
+                  //   DepartmentCard(title: "General Care", subtitle: "647 Doctor", icon: Icons.person),
+                  //   DepartmentCard(title: "Pediatrics", subtitle: "324 Doctor", icon: Icons.child_care),
+                  //   DepartmentCard(title: "Cardiologic", subtitle: "647 Doctor", icon: Icons.favorite),
+                  // ],
                 ),
               ),
               SectionHeader(title: "Doctor",viewAll: (){}),

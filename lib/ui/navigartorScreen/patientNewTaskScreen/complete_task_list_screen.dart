@@ -32,23 +32,27 @@ class _CompleteTaskListScreenState extends State<CompleteTaskListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TMAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        child: Visibility(
-          visible: _getCompleteTaskInProgress==false,
-          replacement: const CenterCircularProgressIndicator(),
-          child: ListView.builder(
-              itemCount: _completeTaskList.length,
-              itemBuilder: (context, index) {
-                return TaskCard(
-                  taskType: TaskType.complete,
-                  taskModel: _completeTaskList[index],
-                  onStatusUpdate: () {
-                    _getCompleteTaskList();
-                  },
-                );
-              }),
-        ),
+      body: Column(
+        children: [
+          Text("Patient Completed Recovery",style: Theme.of(context).textTheme.titleLarge,),
+          Expanded(
+            child: Visibility(
+              visible: _getCompleteTaskInProgress==false,
+              replacement: const CenterCircularProgressIndicator(),
+              child: ListView.builder(
+                  itemCount: _completeTaskList.length,
+                  itemBuilder: (context, index) {
+                    return TaskCard(
+                      taskType: TaskType.completed,
+                      taskModel: _completeTaskList[index],
+                      onStatusUpdate: () {
+                        _getCompleteTaskList();
+                      },
+                    );
+                  }),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_mannager/ui/health/department_item.dart';
 import 'package:task_mannager/ui/health/home_dashboard_screen.dart';
 import 'package:task_mannager/ui/navigartorScreen/doctor_screen.dart';
 import 'package:task_mannager/ui/navigartorScreen/live_chat_screen.dart';
@@ -21,6 +22,7 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
     const NewTaskListScreen(),
 
     const DoctorScreen(),
+    const DepartmentItem(),
     const ServiceScreen(),
     const LiveChatScreen(),
 
@@ -48,6 +50,7 @@ class _BotomMainNavScreenState extends State<BottomMainNavScreen> {
             NavigationDestination(icon: Icon(Icons.home,color: Colors.lightBlueAccent,), label: "Home"),
             NavigationDestination(icon:Icon(Icons.sick_outlined,color: Colors.lightBlueAccent,), label:"Patient"),
             NavigationDestination(icon:Icon(Icons.person,color: Colors.greenAccent,), label:"Doctor"),
+            NavigationDestination(icon:Icon(Icons.category_outlined,color: Colors.greenAccent,), label:"Department"),
             NavigationDestination(icon:Icon(Icons.medical_services,color: Colors.greenAccent), label:"Medicine"),
             NavigationDestination(icon:Icon(Icons.live_help,color: Colors.greenAccent), label:"LiveChat"),
 

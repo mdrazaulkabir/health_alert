@@ -32,23 +32,27 @@ class _ProgressTaskListScreenState extends State<ProgressTaskListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TMAppBar(),
-      body: Padding(
-        padding: EdgeInsets.symmetric(vertical: 16),
-        child: Visibility(
-          visible: _getProgressTaskInProgress==false,
-          replacement: const CenterCircularProgressIndicator(),
-          child: ListView.builder(
-              itemCount: _progressTaskList.length,
-              itemBuilder: (context,index){
-                return TaskCard(
-                  taskType: TaskType.progress,
-                  taskModel: _progressTaskList[index],
-                  onStatusUpdate: () {
-                    _getProgressTaskList();
-                  },
-                );
-              }),
-        ),
+      body: Column(
+        children: [
+          Text("Patient Progress Health",style: Theme.of(context).textTheme.titleLarge,),
+          Expanded(
+            child: Visibility(
+              visible: _getProgressTaskInProgress==false,
+              replacement: const CenterCircularProgressIndicator(),
+              child: ListView.builder(
+                  itemCount: _progressTaskList.length,
+                  itemBuilder: (context,index){
+                    return TaskCard(
+                      taskType: TaskType.progress,
+                      taskModel: _progressTaskList[index],
+                      onStatusUpdate: () {
+                        _getProgressTaskList();
+                      },
+                    );
+                  }),
+            ),
+          ),
+        ],
       ),
 
     );

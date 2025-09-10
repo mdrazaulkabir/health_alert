@@ -38,7 +38,7 @@ class _CanceledTaskListScreenState extends State<CanceledTaskListScreen> {
               itemCount: _cancelTaskList.length,
               itemBuilder: (context, index) {
                 return TaskCard(
-                  taskType: TaskType.canceled,
+                  taskType: TaskType.cancelled,
                   taskModel: _cancelTaskList[index],
                   onStatusUpdate: () {
                     _getCancelTaskList();
@@ -51,7 +51,9 @@ class _CanceledTaskListScreenState extends State<CanceledTaskListScreen> {
   }
   Future<void>_getCancelTaskList()async{
     _getCancelTaskInProgress=true;
-    setState(() { });
+    if(mounted){
+      setState(() { });
+    }
     NetworkResponse response=await NetworkCaller.getRequest(url: Urls.getCancelTaskListUrl);
 
     if(response.isSuccess){
@@ -62,9 +64,13 @@ class _CanceledTaskListScreenState extends State<CanceledTaskListScreen> {
       _cancelTaskList=list;
     }
     else {
-      ShowSnackBarMessage(context, response.errorMessage!);
+      if(mounted){
+        ShowSnackBarMessage(context, response.errorMessage!);
+      }
     }
     _getCancelTaskInProgress=false;
-    setState(() { });
+    if(mounted){
+      setState(() { });
+    }
   }
 }

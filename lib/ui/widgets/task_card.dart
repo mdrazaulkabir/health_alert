@@ -6,7 +6,7 @@ import 'package:task_mannager/ui/widgets/show_snack_bar_massanger.dart';
 
 import '../../data/urls.dart';
 
-enum TaskType { tNew, progress, complete, canceled }
+enum TaskType { tNew, progress, completed, cancelled }
 
 class TaskCard extends StatefulWidget {
   const TaskCard({
@@ -104,7 +104,7 @@ class _TaskCardState extends State<TaskCard> {
       return Colors.blue;
     } else if (widget.taskType == TaskType.progress) {
       return Colors.green;
-    } else if (widget.taskType == TaskType.complete) {
+    } else if (widget.taskType == TaskType.completed) {
       return Colors.yellowAccent;
     } else {
       return Colors.red;
@@ -113,13 +113,13 @@ class _TaskCardState extends State<TaskCard> {
 
   String _getTypeTaskName(){
     if (widget.taskType == TaskType.tNew) {
-      return "New";
+      return "New Patient";
     } else if (widget.taskType == TaskType.progress) {
-      return "Progress";
-    } else if (widget.taskType == TaskType.complete) {
-      return "Completed";
+      return "Progress Patient";
+    } else if (widget.taskType == TaskType.completed) {
+      return "Completed Recovery";
     } else {
-      return "Canceled";
+      return "Patient Die";
     }
   }
 
@@ -131,31 +131,40 @@ class _TaskCardState extends State<TaskCard> {
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              title: const Text("New"),
+              title: const Text("New Patient"),
               trailing: _getTaskStatusTrailing(TaskType.tNew),
               onTap: (){
                 onTapTaskStatus(TaskType.tNew,'New');
+                _updateTaskStatus("New");
+                Navigator.pop(context);
+
               },
             ),
             ListTile(
-              title: const Text("In progress"),
+              title: const Text("Progress Patient"),
               trailing: _getTaskStatusTrailing(TaskType.progress),
               onTap: (){
                 onTapTaskStatus(TaskType.progress,'Progress');
+                _updateTaskStatus("Progress");
+                Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text("Complete"),
-              trailing: _getTaskStatusTrailing(TaskType.complete),
+              title: const Text("Completed Recovery"),
+              trailing: _getTaskStatusTrailing(TaskType.completed),
               onTap: (){
-                onTapTaskStatus(TaskType.complete,'Complete');
+                onTapTaskStatus(TaskType.completed,'Complete');
+                _updateTaskStatus("Complete");
+                Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text("Cancel"),
-              trailing: _getTaskStatusTrailing(TaskType.canceled),
+              title: const Text("Patient Die"),
+              trailing: _getTaskStatusTrailing(TaskType.cancelled),
               onTap: (){
-                onTapTaskStatus(TaskType.canceled,'Canceled');
+                onTapTaskStatus(TaskType.cancelled,'Canceled');
+                _updateTaskStatus("Canceled");
+                Navigator.pop(context);
               },
             ),
           ],
